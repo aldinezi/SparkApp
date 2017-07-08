@@ -1,0 +1,130 @@
+.navbar-inverse {
+    background: #322d47;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 0px 25px #383838;
+    margin-bottom: 0;
+}
+
+.navbar-inverse.affix {
+    z-index: 2;
+    width: 100%;
+}
+
+.hide-bullets {
+    list-style: none;
+    margin-left: -40px;
+    margin-top: 20px;
+}
+
+.list-group {
+    padding: 0;
+    border-radius: 0;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.carousel-inner>.item {
+    width: 100%;
+    height: calc(100vh - 50px);
+    min-height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+
+.carousel-inner>.item img {
+    align-self: center;
+    margin: auto;
+}
+
+
+/*.carousel-inner .flexwrap {
+    display: flex;
+}*/
+
+.slides {
+    padding: 0;
+}
+
+.backIcon {
+    padding: 0px 0 5px 30px !important;
+    min-width: 100px;
+    font-size: 40px;
+    line-height: 45px !important;
+    background: rgba(216, 255, 216, 0.26);
+    color: white !important;
+}
+
+.backIcon>img {
+    max-width: 30px;
+    max-height: 50px;
+}
+
+.sideImg {
+    height: calc(100vh - 50px);
+    display: flex;
+    justify-content: center;
+}
+
+.sideImg>img {
+    align-self: center;
+    max-width: 100%;
+}
+
+.carousel-inner .item .text-center {
+    display: flex;
+    height: calc(100% - 60px);
+}
+
+.phone-title {
+    margin: 0px;
+    padding: 30px 15px;
+    background: #818181;
+    color: white;
+}
+
+.tableWrap {
+    padding: 15px 15px;
+}
+
+.sendback {
+    z-index: -9;
+}
+
+.sideDetails {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    background: #dcdcdc;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+.table>tbody>tr>td:first-child {
+    color: #4d4d4d;
+}
+
+.table>tbody>tr>td:last-child {
+    font-weight: bold;
+}
+
+.carousel-control {
+    color: #09141e;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-caption {
+        right: 0;
+        left: 0;
+        padding-bottom: 0;
+        bottom: 0;
+        background: rgba(50, 45, 71, 0.5);
+    }
+}

@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<html ng-app="aldinApp">
 
-  <script>
-    // You can also require other files to run in this process
+<head>
+    <meta charset="UTF-8">
+    <title>Spark school App - Aldin Nezirić</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="./mainStyle.css">
+</head>
+
+<body ng-controller="mainCtrl">
+    <!-- main navbar -->
+    <header>
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="50">
+            <div class="container-fluid nopadding">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#!/main" class="backIcon" ng-show="backBtn" tooltip-placement="bottom-left" uib-tooltip="Click here to get back.">	&larr; </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <ng-view></ng-view>
+                <!-- End Carousel -->
+            </div>
+        </div>
+    </main>
+
+</body>
+
+<script>
     require('./renderer.js')
-  </script>
+</script>
+<script>
+    window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
+</script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<!--<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+
+<script src="./node_modules/angular/angular.min.js"></script>
+<script src="./node_modules/angular-animate/angular-animate.min.js"></script>
+<script src="./node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script src="./aldinApp.js"></script>
+
+
 </html>

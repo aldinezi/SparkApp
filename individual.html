@@ -1,0 +1,68 @@
+<div ng-controller="singleCtrl">
+    <div class="col-md-6 text-center">
+        <div class="sideImg">
+            <img ng-src="{{selectedPhone.image}}" />
+        </div>
+    </div>
+    <div class="col-md-6 nopadding sendback">
+        <div class="sideDetails">
+            <h1 class="phone-title">{{selectedPhone.name}}</h1>
+            <div class="tableWrap">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Manufacturer</td>
+                            <td>{{selectedPhone.manufacturer}}</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>{{selectedPhone.ram}}</td>
+                        </tr>
+                        <tr>
+                            <td>Internal memory</td>
+                            <td>{{selectedPhone.internal_memory}}</td>
+                        </tr>
+                        <tr>
+                            <td>CPU</td>
+                            <td>{{selectedPhone.cpu}}</td>
+                        </tr>
+                        <tr>
+                            <td>Back Camera</td>
+                            <td>{{selectedPhone.back_camera}}</td>
+                        </tr>
+                        <tr>
+                            <td>Front Camera</td>
+                            <td>{{selectedPhone.front_camera}}</td>
+                        </tr>
+                        <tr>
+                            <td>GPU</td>
+                            <td>{{selectedPhone.gpu}}</td>
+                        </tr>
+                        <tr>
+                            <td>Battery</td>
+                            <td>{{selectedPhone.battery}}</td>
+                        </tr>
+                        <tr>
+                            <td>Battery removable</td>
+                            <td>{{selectedPhone.battery_removable}}</td>
+                        </tr>
+                        <tr>
+                            <td>LTE</td>
+                            <td>{{selectedPhone.lte}}</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>{{selectedPhone.price}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
