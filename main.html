@@ -1,4 +1,4 @@
-<div id="carousel" uib-carousel active="active" interval="3000" no-transition="false" no-wrap="noWrapSlides">
+<div  uib-carousel active="active" interval="3000" no-transition="false" no-wrap="noWrapSlides">
     <div uib-slide ng-repeat="phone in phones track by $index" index="$index">
         <img ng-click="leftcl($index)" ng-right-click="rightcl(phone.id)" ng-src="{{phone.image}}" style="margin:auto;">
         <div class="carousel-caption">

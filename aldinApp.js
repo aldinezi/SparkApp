@@ -1,11 +1,9 @@
 var app = angular.module('aldinApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+var axios = require('axios');
 
-jQuery(document).ready(function() {
+app.controller('mainCtrl', function($scope, dataService, $location) {
 
-});
-app.controller('mainCtrl', function($scope, dataService, $location, $routeParams) {
-
-    $scope.$on('$routeChangeSuccess', function(e, current, pre) {
+    $scope.$on('$routeChangeSuccess', function() {
         if ($location.path().indexOf('phone') > -1) {
             $scope.backBtn = true;
 
@@ -14,23 +12,21 @@ app.controller('mainCtrl', function($scope, dataService, $location, $routeParams
         }
     });
 
-
-
-
     $scope.rightcl = function(id) {
         window.location.href = "#!/phone/" + id;
-    }
+    };
     $scope.leftcl = function(index) {
         $scope.phones.splice(index, 1);
-    }
+    };
 
     dataService.getData().then(function(response) {
         $scope.phones = response.data.phones;
+        $scope.$apply();
     });
 
 });
 
-app.controller('singleCtrl', function($scope, $rootScope, $location, $routeParams) {
+app.controller('singleCtrl', function($scope, $routeParams) {
     $scope.itemID = $routeParams.id;
     $scope.selectedPhone = $scope.phones.find(function(ph) {
         if (ph.id == $routeParams.id)
@@ -39,14 +35,11 @@ app.controller('singleCtrl', function($scope, $rootScope, $location, $routeParam
 
 });
 
-app.factory('dataService', function($http, $sce) {
+app.factory('dataService', function() {
     return {
         getData: function() {
-            var url = $sce.trustAsResourceUrl('https://www.nsoft.com/angular/');
-            return $http({
-                url: url,
-                method: 'JSONP'
-            }).then(function(response) {
+            return axios.get('https://api.myjson.com/bins/rz97o')
+            .then(function(response) {
                 return response;
             });
         }

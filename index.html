@@ -18,6 +18,9 @@
                     <li>
                         <a ng-href="#!/main" class="backIcon" ng-show="backBtn" tooltip-placement="bottom-left" uib-tooltip="Click here to get back.">	&larr; </a>
                     </li>
+                    <div class="instructions" ng-show="!backBtn">
+                        Use right click to remove item from slideshow and left click for details.
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -40,7 +43,7 @@
     window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.min.js');
 </script>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<!--<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
 <script src="./node_modules/angular/angular.min.js"></script>
@@ -48,6 +51,5 @@
 <script src="./node_modules/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 <script src="./aldinApp.js"></script>
-
 
 </html>

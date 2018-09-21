@@ -35,6 +35,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: white;
+    display: none;
+}
+.carousel-inner>.item.active {
+    display: block;
 }
 
 .carousel-inner>.item img {
@@ -42,10 +46,15 @@
     margin: auto;
 }
 
+.carousel-indicators {
+    margin-bottom: 2rem;
+}
 
-/*.carousel-inner .flexwrap {
+.carousel-inner {
     display: flex;
-}*/
+    flex-direction: row;
+    width: 100vw;
+}
 
 .slides {
     padding: 0;
@@ -66,7 +75,7 @@
 }
 
 .sideImg {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 61px);
     display: flex;
     justify-content: center;
 }
@@ -79,6 +88,7 @@
 .carousel-inner .item .text-center {
     display: flex;
     height: calc(100% - 60px);
+    width: 100vw;
 }
 
 .phone-title {
@@ -99,8 +109,13 @@
 .sideDetails {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 61px);
     background: #dcdcdc;
+}
+
+.instructions {
+    color: white;
+    font-weight: bold;
 }
 
 .nopadding {
@@ -127,4 +142,8 @@
         bottom: 0;
         background: rgba(50, 45, 71, 0.5);
     }
+}
+.single-display {
+    display: flex;
+    width: 100vw;
 }
