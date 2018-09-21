@@ -2,6 +2,8 @@
 
 This app was made as an Angular-Electron final Spark school project in June 2017.
 
+![alt text](https://raw.githubusercontent.com/aldinezi/SparkApp/master/screenshot.png)
+
 ## To Use
 
 ```bash
